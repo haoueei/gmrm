@@ -6,3 +6,7 @@ $header-bg-color-secondary: #1a4460;
 $section-headings-color: #225577;
 
 @import "{{ site.theme }}";
+
+.page-header .btn {
+  display: none;
+}
