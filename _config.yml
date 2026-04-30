@@ -1,0 +1,17 @@
+title: "Supplementary Web for RSB (Anonymous)"
+theme: jekyll-theme-cayman
+
+color-scheme: light #  或者 dark。 改变页面背景色
+
+# -- 可选的，依赖于 color-scheme 设置
+# 使用 custom-css 更灵活。
+#
+light:
+  color-text: "#535D60"
+  color-background: "#2A9ADA"
+  color-link: "#2a7ae2"
+#
+#   dark:
+#       color-text: "#ffffff"
+#       color-background: "#1d2129"
+#       color-link: "#54a0ff"
