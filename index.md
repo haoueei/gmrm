@@ -27,7 +27,7 @@ This website accompanies the anonymous RA-L submission *"Generalized Mean Reflec
 Supplementary video demonstrations of the proposed method.
 
 <video width="100%" controls>
-  <source src="images/gmax0.3.mov" type="video/quicktime">
+  <source src="images/gmax0.3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
