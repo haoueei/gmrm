@@ -10,7 +10,7 @@ description: "in rank-deficient robot motion for trajectory optimization and col
 
 # Supplementary Materials (Anonymous)
 
-This website accompanies the anonymous RA-L submission *"Generalized Mean Reflected Mass in Rank-Deficient Robot Motion for Trajectory Optimization and Collision Impact Evaluation."* It provides code, videos, and additional results to support the paper.
+This website accompanies the anonymous RA-L submission. It provides code, videos, and additional results to support the paper.
 
 ## Contents
 
