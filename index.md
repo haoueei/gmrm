@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Generalized Mean Reflected Mass"
-description: "in rank-deficient robot motion for trajectory optimization and collision impact evaluation"
+# description: "in rank-deficient robot motion for trajectory optimization and collision impact evaluation"
 ---
 
 <script id="MathJax-script" async
