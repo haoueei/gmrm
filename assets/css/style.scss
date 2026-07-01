@@ -1,0 +1,155 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5/index.css');
+
+$header-bg-color: #2b2b2b;
+$header-bg-color-secondary: #4a4a4a;
+$section-headings-color: #2f4858;
+
+@import "{{ site.theme }}";
+
+body {
+  color: #222222;
+  background: #fafafa;
+  font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+.page-header {
+  font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.main-content pre,
+.main-content code,
+.main-content tt,
+code, kbd, pre, samp {
+  font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.main-content {
+  background: #ffffff;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  color: #2f4858;
+}
+
+.main-content a {
+  color: #2f4858;
+}
+
+.main-content a:hover {
+  color: #1f333f;
+}
+
+.main-content hr {
+  border-top: solid 1px #dddddd;
+}
+
+.main-content blockquote {
+  color: #666666;
+  border-left: 0.3rem solid #dddddd;
+}
+
+.page-header .btn {
+  display: none;
+}
+
+.figure-row,
+.video-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.video-row {
+  max-width: 50%;
+  margin: 0 auto 1.5rem;
+}
+
+.video-row--four {
+  max-width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.equation {
+  margin: 1rem 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.figure-row {
+  margin-bottom: 1.5rem;
+}
+
+.figure-row figure {
+  margin: 0;
+}
+
+.figure-row img {
+  width: 100%;
+  display: block;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.figure-row figcaption,
+.video-row figcaption {
+  margin-top: 0.5rem;
+  color: #555555;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.video-row figure {
+  margin: 0;
+}
+
+.video-row video {
+  width: 100%;
+  display: block;
+  background: #111111;
+  border: 1px solid #dddddd;
+}
+
+.code-video {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.code-video figure {
+  margin: 0;
+}
+
+.code-video video {
+  width: 100%;
+  display: block;
+  background: #111111;
+  border: 1px solid #dddddd;
+}
+
+.code-video figcaption {
+  margin-top: 0.5rem;
+  color: #555555;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.site-footer {
+  display: none;
+}
