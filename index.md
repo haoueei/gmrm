@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Generalized Mean Reflected Mass"
-# description: "in rank-deficient robot motion for trajectory optimization and collision impact evaluation"
+description: "for Subspace-Aware Robot Motion and Impact Evaluation"
 ---
 
 <script>
@@ -21,9 +21,6 @@ title: "Generalized Mean Reflected Mass"
   src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
 </script>
 
-*"Generalized Mean Reflected Mass for Subspace-Aware Robot Motion and Impact Evaluation"*
-
-Anonymous RA-L supplementary materials — code, videos, and additional results.
 
 ## Contents
 
@@ -184,3 +181,5 @@ Then run the controller demo:
 ```bash
 uv run python main.py
 ```
+
+> **Note:** The initial run may take a little while to start.
