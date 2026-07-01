@@ -174,7 +174,7 @@ with:
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then reproduce the demo from the code repository:
 
 ```bash
-git clone <anonymous-code-repo-url>
+git clone https://github.com/haoueei/gmrm-code.git
 cd gmrm-code
 uv sync --locked
 ```
@@ -184,7 +184,3 @@ Then run the controller demo:
 ```bash
 uv run python main.py
 ```
-
----
-
-*This page will be updated with final links and details upon acceptance.*
