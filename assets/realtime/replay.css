@@ -1,8 +1,8 @@
-#realtime-replay{color-scheme:light;--ink:#222;--muted:#666;--rule:#ddd;--title:24px;--body:14px;--small:12px}
+#realtime-replay{color-scheme:light;--ink:#222;--muted:#666;--rule:#ddd;--body:1em;--small:0.85rem}
 #realtime-replay *{box-sizing:border-box}
-#realtime-replay{color:var(--ink);font:var(--body)/1.45 "Fira Sans",sans-serif;font-synthesis:none}
-#realtime-replay .experiment-description{margin:0 0 18px;line-height:1.6}
-#realtime-replay .controls{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+#realtime-replay{color:inherit;font:inherit;font-synthesis:none}
+#realtime-replay .experiment-description{margin:0 0 18px;line-height:inherit}
+#realtime-replay .controls{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:18px}
 #realtime-replay label{display:flex;gap:8px;align-items:center}
 #realtime-replay button,#realtime-replay select{font:inherit;color:inherit;background:white;border:1px solid #ccc;border-radius:3px;padding:5px 9px;cursor:pointer}
 #realtime-replay button:hover,#realtime-replay select:hover{background:#f5f5f5}
@@ -18,19 +18,19 @@
 #realtime-replay .icon-button .play-shape{fill:currentColor;stroke:none}
 #realtime-replay #replay-play[data-playing="false"] .pause-shape,#realtime-replay #replay-play[data-playing="true"] .play-shape{display:none}
 #realtime-replay .chart{padding-bottom:8px;margin-bottom:12px}
-#realtime-replay .chart-title{font-size:var(--body);margin-bottom:4px;display:flex;align-items:center;justify-content:flex-start;gap:10px;text-align:left}
+#realtime-replay .chart-title{font-size:var(--small);margin-bottom:4px;display:flex;align-items:center;justify-content:flex-start;gap:10px;text-align:left}
 #realtime-replay .plot{display:block;width:100%;height:150px;overflow:visible}
 #realtime-replay .plot text{font:var(--small) "Fira Sans",sans-serif;fill:#666}
 #realtime-replay .math{font-family:"Fira Math",serif}
 #realtime-replay details{margin-top:16px;padding-top:12px}
-#realtime-replay summary{cursor:pointer;display:flex;align-items:center;gap:7px;list-style:none}
+#realtime-replay summary{font-size:var(--small);cursor:pointer;display:flex;align-items:center;gap:7px;list-style:none}
 #realtime-replay summary::-webkit-details-marker{display:none}
 #realtime-replay summary::before{content:"";width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:5px solid #666;transition:transform .15s}
 #realtime-replay details[open]>summary::before{transform:rotate(90deg)}
 #realtime-replay summary:focus-visible{outline:2px solid #555;outline-offset:3px}
 #realtime-replay .detail-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:16px}
 #realtime-replay .detail-grid .plot{height:170px}
-#realtime-replay .plot-options{display:flex;justify-content:center;gap:16px;margin:12px 0}
+#realtime-replay .plot-options{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:12px 0}
 #realtime-replay .legend{display:flex;justify-content:center;gap:16px;font-size:var(--small);color:var(--muted);margin-top:4px}
 #realtime-replay .line{display:inline-block;width:24px;border-top:2px solid #222;vertical-align:middle;margin-right:6px}
 #realtime-replay .dashed{border-top:2px dashed #777}
@@ -39,7 +39,7 @@
 #realtime-replay .note li{margin:3px 0}
 #realtime-replay .footer{margin-top:18px;padding-top:10px}
 #realtime-replay #replay-error{background:#eee;padding:10px;margin-bottom:12px}
-#realtime-replay {margin:1.5rem 0;--body:14px;--small:12px}
+#realtime-replay {margin:1.5rem 0}
 #realtime-replay math {font-family:"Fira Math",serif}
 #realtime-replay video {margin:0}
 #realtime-replay button {line-height:1.2}

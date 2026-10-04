@@ -7,13 +7,13 @@ const extent=values=>[Math.min(...values),Math.max(...values)];
 function padded(values){let [a,b]=extent(values),p=Math.max((b-a)*.1,.01);return [a-p,b+p]}
 const metricBounds=[1.5483502570260343, 1.9865155432647057],errorMax=242.07884232992447,computeMax=0.523054500354192;
 function number(x){return Math.abs(x)>=100?x.toFixed(0):Math.abs(x)>=10?x.toFixed(1):x.toFixed(2)}
-function chart(id,series,bounds,range=[0,active.duration]){const el=$(id),H=id.startsWith('velocity')?170:150,W=el.clientWidth||540,L=47,R=16,T=10,B=32;el.setAttribute('viewBox',`0 0 ${W} ${H}`);
+function chart(id,series,bounds,range=[0,active.duration]){const el=$(id),H=id.startsWith('velocity')?170:150,W=el.clientWidth||540,L=47,R=16,T=10,B=38;el.setAttribute('viewBox',`0 0 ${W} ${H}`);
  const x=t=>L+(t-range[0])/(range[1]-range[0])*(W-L-R),y=z=>H-B-(z-bounds[0])/(bounds[1]-bounds[0])*(H-T-B);let s='';
  let ticks=Array.from({length:4},(_,k)=>bounds[0]+(bounds[1]-bounds[0])*k/3);
  if(id.startsWith('velocity'))ticks=[...ticks.filter(z=>Math.abs(z)>(bounds[1]-bounds[0])*.15),0].sort((a,b)=>a-b);
  for(const z of ticks){s+=`<line x1="${L}" x2="${W-R}" y1="${y(z)}" y2="${y(z)}" stroke="${z===0&&id.startsWith('velocity')?'#bbb':'#ececec'}"/><text x="${L-9}" y="${y(z)+4}" text-anchor="end">${z===0?'0':number(z)}</text>`}
  const detail=id==='velocity-detail',step=detail?(range[1]-range[0])/4:(W<420?1:.5);
- for(let t=range[0];t<=range[1]+1e-9;t+=step)s+=`<text x="${x(t)}" y="${H-17}" text-anchor="middle">${t.toFixed(detail?3:1)}</text>`;
+ for(let t=range[0];t<=range[1]+1e-9;t+=step)s+=`<text x="${x(t)}" y="${H-19}" text-anchor="middle">${t.toFixed(detail?3:1)}</text>`;
  s+=`<text x="${(L+W-R)/2}" y="${H-1}" text-anchor="middle">Time [s]</text>`;
  if(id==='velocity')s+=`<rect class="window-band" x="${L}" y="${T}" width="0" height="${H-T-B}" fill="#eee"/>`;
  s+=`<defs><clipPath id="clip-${id}"><rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}"/></clipPath></defs>`;
