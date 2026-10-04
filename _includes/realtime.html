@@ -1,0 +1,33 @@
+<div id="realtime-replay" data-assets="{{ "/assets/realtime/" | relative_url }}">
+<div class="layout"><section class="video-panel">
+<p class="experiment-description">Online minimization and maximization of the X–Z plane GMRM on a Franka Panda, with QP updates scheduled at 50 Hz. Each objective is shown in two trials with the same target pose and controller settings.</p>
+<nav class="controls" aria-label="Trial selection"><label>Objective <select id="replay-objective"><option value="min">Minimize</option><option value="max">Maximize</option></select></label><label>Trial <select id="replay-trial"><option value="01">01</option><option value="02">02</option></select></label></nav>
+<div id="replay-error" hidden></div>
+<video id="replay-video" muted playsinline preload="metadata" aria-label="Recorded Panda experiment"></video>
+<div class="transport">
+<button id="replay-play" class="icon-button" data-playing="false" title="Play" aria-label="Play"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="play-shape" d="M5 3 L17 10 L5 17 Z"/><g class="pause-shape"><path d="M6 4V16 M14 4V16" stroke-width="3"/></g></svg></button>
+<button id="replay-restart" class="icon-button" title="Restart" aria-label="Restart"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 8a6.5 6.5 0 1 1 0 5 M4 3v5h5"/></svg></button>
+<input id="replay-seek" type="range" min="0" max="1" step="0.001" value="0" aria-label="Motion time"><span class="time" id="replay-time"></span>
+<select id="replay-speed" aria-label="Playback speed" title="Playback speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select>
+</div></section><section>
+<div class="chart"><div class="chart-title"><span>(a) GMRM \(\bar{m}_{\mathcal{S}_{\mathrm{XZ}}}^{(2)}\) [kg]</span></div><svg class="plot" id="replay-metric" role="img" aria-label="X–Z plane GMRM over time"></svg></div>
+<div class="chart"><div class="chart-title">(b) Position error [mm]</div><svg class="plot" id="replay-position" role="img" aria-label="Euclidean position error over time"></svg></div>
+<div class="chart"><div class="chart-title">(c) QP computation time [ms]</div><svg class="plot" id="replay-compute" role="img" aria-label="Complete QP update computation time"></svg></div>
+<details id="replay-details"><summary>Additional plots</summary>
+<div class="plot-options"><label>Joint <select id="replay-joint" aria-label="Joint"></select></label><label>Window <select id="replay-window" aria-label="Detail window"><option value="0.2">200 ms</option><option value="0.1">100 ms</option></select></label></div>
+<div class="detail-grid">
+<div><div class="chart-title">(d) Joint velocity <span>\(\dot{q}\)</span> [rad/s]</div><svg class="plot" id="replay-velocity" role="img" aria-label="Full measured and desired joint velocity"></svg></div>
+<div><div class="chart-title">(e) Joint velocity — detail [rad/s]</div>
+<div class="legend"><span><i class="line"></i>Measured</span><span><i class="line dashed"></i>Desired</span></div>
+<svg class="plot" id="replay-velocity-detail" role="img" aria-label="Scrolling measured and desired joint velocity"></svg>
+<div class="note">Note:<ul><li>Desired is the SDK velocity reference after filtering and rate limiting to smooth command changes and enforce configured motion limits.</li><li>Shading in (d) marks the window in (e); its vertical scale adapts to that window.</li></ul></div></div>
+</div></details>
+</section></div>
+<footer class="footer note">Note:<ul>
+<li>The curves end at different times because robot states continue to be recorded during stopping, after QP updates have ceased.</li>
+<li>Time starts at the first logged state. Video timestamps are aligned; exposure timing is uncalibrated.</li>
+<li>GMRM is averaged over the X–Z plane and evaluated at QP input states; position error is the Euclidean distance to the target.</li>
+<li>Computation includes model, gradient and QP work, not end-to-end latency.</li>
+</ul></footer>
+</div>
+<script defer src="{{ "/assets/realtime/replay.js" | relative_url }}"></script>

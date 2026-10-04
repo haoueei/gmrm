@@ -153,3 +153,5 @@ code, kbd, pre, samp {
 .site-footer {
   display: none;
 }
+
+@font-face {font-family:"Fira Math";src:url("{{ "/assets/realtime/FiraMath-Regular.otf" | relative_url }}") format("opentype");}

@@ -25,6 +25,7 @@ description: "for Subspace-Aware Robot Motion and Impact Evaluation"
 ## Contents
 
 - [Demonstrations](#video)
+- [Online Hardware Validation](#online-hardware)
 - [Controller & Code](#code)
 - [Getting Started](#getting-started)
 
@@ -35,7 +36,7 @@ description: "for Subspace-Aware Robot Motion and Impact Evaluation"
 
 Supplementary videos for Experiment 3: Motion Control and Impact Evaluation.
 
-Each video shows the arm impacting the [Pilz Robot Measurement System (PRMS)](https://www.pilz.com/en-US/products/robotics/prms/prms) from a metric-optimal pre-collision configuration. The configuration is computed offline by the [QP controller](#code); in these clips a motion planner moves the arm to it so that all trials share a common timeline. (The online QP-driven motion is shown under [Code](#code).) Maximizing the X–Z plane GMRM $\bar{m}^{(2)}\_{s,\text{XZ}}$ produces higher collision forces than minimizing it.
+Each video shows the arm impacting the [Pilz Robot Measurement System (PRMS)](https://www.pilz.com/en-US/products/robotics/prms/prms) from a metric-optimal pre-collision configuration. The configuration is computed offline by the [QP controller](#code); in these clips a motion planner moves the arm to it so that all trials share a common timeline. (Online hardware validation is shown [below](#online-hardware); simulation examples are provided under [Controller & Code](#code).) Maximizing the X–Z plane GMRM $\bar{m}^{(2)}\_{s,\text{XZ}}$ produces higher collision forces than minimizing it.
 
 <div class="figure-row">
   <figure>
@@ -97,6 +98,14 @@ Each video shows the arm impacting the [Pilz Robot Measurement System (PRMS)](ht
 
 ---
 
+<a id="online-hardware"></a>
+## Online Hardware Validation
+
+<link rel="stylesheet" href="{{ "/assets/realtime/replay.css" | relative_url }}">
+{% include realtime.html %}
+
+---
+
 <a id="code"></a>
 ## Controller & Code
 
@@ -121,7 +130,7 @@ Each video shows the arm impacting the [Pilz Robot Measurement System (PRMS)](ht
   </figure>
 </div>
 
-These clips show the QP controller running online, resolving the arm's redundancy to increase or decrease the reflected mass while tracking the end-effector. The control loop runs at a fixed time step of $\Delta t = 0.025~\mathrm{s}$ (40 Hz).
+These simulation clips show the QP controller running online, resolving the arm's redundancy to increase or decrease the reflected mass while tracking the end-effector. The control loop runs at a fixed time step of $\Delta t = 0.025~\mathrm{s}$ (40 Hz).
 
 We incorporate the reflected-mass metric into a QP controller as a secondary objective ([Nocedal & Wright, 2006](https://doi.org/10.1007/978-0-387-40065-5); [Haviland & Corke, 2021](https://arxiv.org/abs/2010.08686)):
 
