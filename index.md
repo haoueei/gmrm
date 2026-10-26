@@ -24,10 +24,18 @@ description: "for Subspace-Aware Robot Motion and Impact Evaluation"
 
 ## Contents
 
+- [Supplementary Materials](#supplementary)
 - [Demonstrations](#video)
 - [Online Hardware Validation](#online-hardware)
 - [Controller & Code](#code)
 - [Getting Started](#getting-started)
+
+---
+
+<a id="supplementary"></a>
+## Supplementary Materials
+
+Controller details, simulation settings, Experiment 3 configurations, and the hardware validation protocol: [**Download PDF**](docs/supplementary-materials.pdf) (8 pages).
 
 ---
 
